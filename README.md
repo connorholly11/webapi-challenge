@@ -1,3 +1,18 @@
+Stretch: https://github.com/connorholly11/apichallengestretch
+
+- Mention two parts of Express that you learned about this week.
+  - It’s a node.js framework that sits on top of your application (kind of like React for backend)
+  - Makes our code easier and adds key features like middleware and routing
+- Describe Middleware?
+  - It’s basically an array of functions. Once it gets through one function then it either sends a response or goes to the next function in the middleware
+- Describe a Resource?
+  - This is what the app cares about in the URL
+  - The location of the resource is what gets sent to the API
+- What can the API return to help clients know if a request was successful?
+  - status codes like 200, 404, 500 to tell them if it was successful, but also if it wasn’t, what was wrong.
+- How can we partition our application into sub-applications?
+  - By creating express routers. So we can have one for /users and then another for /posts and then it all comes together in the server or index
+
 # Sprint Challenge: Express and Node.js - Projects & Actions
 
 This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored Building RESTful Web APIs with Express and Node.js, Server-side Routing, Express Middleware & Deployment and Good Practices. In your challenge for this Sprint, you will demonstrate proficiency by creating an Web API using Node.js and Express.
