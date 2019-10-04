@@ -1,5 +1,6 @@
 const express = require("express");
 const helmet = require("helmet");
+const cors = require("cors");
 const actionRoutes = require("./data/expressRouters/actionModel");
 const projectRoutes = require("./data/expressRouters/projectModel");
 
@@ -12,14 +13,11 @@ function logger(req, res, next) {
   next();
 }
 
+server.use(cors());
 server.use(express.json());
 server.use(helmet());
 server.use(logger);
 server.use("/action", actionRoutes);
 server.use("/project", projectRoutes);
-
-server.get("/", (req, res) => {
-  res.send(`<h2>Let's write some middleware!</h2>`);
-});
 
 module.exports = server;
