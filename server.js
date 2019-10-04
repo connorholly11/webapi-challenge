@@ -16,7 +16,7 @@ server.use(express.json());
 server.use(helmet());
 server.use(logger);
 server.use("/action", actionRoutes);
-server.use("project", projectRoutes);
+server.use("/project", projectRoutes);
 
 server.get("/", (req, res) => {
   res.send(`<h2>Let's write some middleware!</h2>`);
