@@ -13,7 +13,7 @@ function logger(req, res, next) {
 }
 
 server.use(express.json());
-server.use(helmet);
+server.use(helmet());
 server.use(logger);
 server.use("/action", actionRoutes);
 server.use("project", projectRoutes);
